@@ -1,6 +1,6 @@
 # Paper ECG
 
-An application for digitizing ECG scans. (Project 2021)
+An application for digitizing ECG scans. (2021 Project)
 
 See [paper-ecg](https://github.com/Tereshchenkolab/paper-ecg) for the main code.
 
