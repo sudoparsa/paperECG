@@ -38,8 +38,7 @@ def preprocess_files(records_path=RECORDS_PATH, out_path=OUT_PATH, metadata_path
                 preprocess(records_path + image, out_folder + file_name + '.csv')
                 ocr(records_path + image, out_folder, tesseract_path)
             except:
-                print()
-                print(f'Error in file {records_path+image}')
+                print(f'Error in file {image}')
     return
 
 

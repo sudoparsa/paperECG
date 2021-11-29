@@ -201,6 +201,7 @@ def extractSignal(binary: BinaryImage) -> Optional[np.ndarray]:
             adjacent = list(getAdjacent(pointsByColumn, bestPathToPoint, point.index, minimumLookBack))
 
             if len(adjacent) == 0:
+                print()
                 print(f"None adjacent to {point}")
                 bestPathToPoint[point] = (0, None, 0)
             else:

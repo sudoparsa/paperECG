@@ -75,6 +75,7 @@ class MainController:
             self.openImage = openImage(path)
             self.attempToLoadAnnotations()
         else:
+            print()
             print("[Warning] No image selected")
 
     def openFileBrowser(self, caption: str, fileType: str, initialPath: str ="") -> str:
