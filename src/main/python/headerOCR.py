@@ -31,8 +31,10 @@ def process(string):
 def ocr(file_path, out_path, tesseract_path, config='--psm 11'):
     image = cv2.imread(file_path)
     head = image[:222, :] # Based on dataset images
+    titr = image[:200, 950:2050] # Based on dataset images
     pytesseract.pytesseract.tesseract_cmd = tesseract_path
     text = pytesseract.image_to_string(head, lang='eng', config=config)
+    report_text = pytesseract.image_to_string(titr, lang='eng', config=config)
     res = ''
     for line in text.split('\n'):
         if line.startswith('Heart') or line.startswith('PR') or line.startswith('QRS') or line.startswith(
@@ -44,5 +46,8 @@ def ocr(file_path, out_path, tesseract_path, config='--psm 11'):
     f.close()
     f = open(out_path + 'info.txt', 'w')
     f.write(res)
+    f.close()
+    f = open(out_path + 'report.txt', 'w')
+    f.write(report_text)
     f.close()
 
