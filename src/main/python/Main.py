@@ -33,9 +33,13 @@ def preprocess_files(records_path=RECORDS_PATH, out_path=OUT_PATH, metadata_path
             out_folder = out_path + '\\' + file_name + '\\'
             if not os.path.exists(out_folder):
                 os.makedirs(out_folder)
-            metadata(image, records_path, metadata_path)
-            preprocess(records_path + image, out_folder + file_name + '.csv')
-            ocr(records_path + image, out_folder, tesseract_path)
+            try:
+                metadata(image, records_path, metadata_path)
+                preprocess(records_path + image, out_folder + file_name + '.csv')
+                ocr(records_path + image, out_folder, tesseract_path)
+            except:
+                print()
+                print(f'Error in file {records_path+image}')
     return
 
 
