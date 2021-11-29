@@ -64,7 +64,7 @@ The steps involved are:
 
 - [Click here](https://github.com/tesseract-ocr/tesseract) to see additional info how to install the engine on Linux, Mac OSX and Windows. Look for the binary installer for windows.
 
-- You must be able to invoke the tesseract command as tesseract. If this isn’t the case, for example because tesseract isn’t in your PATH, you will have to change the “tesseract_cmd” variable pytesseract.pytesseract.tesseract_cmd. So all you have to do for this project is to change config.ini file.
+- You must be able to invoke the tesseract command as tesseract. If this isn’t the case, for example because tesseract isn’t in your PATH, you will have to change the “tesseract_cmd” variable pytesseract.pytesseract.tesseract_cmd. Please note that all you have to do for this project is to change the config.ini file.
 ---
 
 You should now have:
