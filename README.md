@@ -25,7 +25,7 @@ The steps involved are:
 
 1. [Installing Python 3.6.7](#1-install-python-367)
 1. [Installing dependencies](#2-install-dependencies)
-1. [Install Tesseract](#3-install-tesseract)
+1. [Installing Tesseract](#3-install-tesseract)
 
 
 
